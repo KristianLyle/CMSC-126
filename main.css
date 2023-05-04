@@ -16,6 +16,7 @@ body {
 }
 
 .searchBar {
+    text-indent: 5px;
     position: absolute;
     right: 160px;
     top: 137px;
