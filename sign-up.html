@@ -30,19 +30,20 @@
 	<b>
 	<p id="current-date"></p>
 	</b>
-		<form class="form">
-			<label class="label" for="username">Username</label><br>
-			<input type="text" class="inputField" name="username" required><br>
+	<form class="form">
+		<label class="label" for="username">Username</label><br>
+		<input type="text" id="username" class="inputField" name="username" required><br>
 
-			<label class="label" for="password">Password</label><br>
-			<input type="text" class="inputField" name="password" required><br>
+		<label class="label" for="password">Password</label><br>
+		<input type="text" id="password" class="inputField" name="password" required><br>
+		<p class="pop" id="note"></p>
 
-			<label class="label" for="password">Re-Enter Password</label><br>
-			<input type="text" class="inputField" name="password" required><br>
+		<label class="label" for="repassword">Re-Enter Password</label><br>
+		<input type="text" id="repassword" class="inputField" name="repassword" required><br>
+		<p class="pop" id="warning"></p>
 
-			<button class="button" type="button" onclick="add_student()">Sign Up</button><br>
-			
-		</form>
+		<button class="button" type="button" onclick="add_user()">Sign Up</button><br>
+	</form>
 	<div id="footer">
 		<p id="copyright">©2023 Project Katipunan. All rights reserved.</p>
 		<div id="subfooter">
