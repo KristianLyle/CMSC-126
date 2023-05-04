@@ -207,6 +207,7 @@ body {
     background-color: #4B0A0A;
     color: white;
     z-index: 0;
+    overflow-y: auto;
 }
 
 .subContentbackGroundRectangle1 {
