@@ -200,6 +200,17 @@ body {
 	color: #41100D;
 }*/
 
+.pop {
+	position: relative;
+	bottom: 1em;
+	width: 30%;
+	margin: 0 35%;
+	font-size: 15px;
+	color: red;
+	text-align: center;
+	font-weight: bold;
+}
+
 #query {
 
 	font-size: 18px;
