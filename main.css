@@ -61,7 +61,7 @@ body {
 .contentDiv {
     position: absolute;
     width: 100%;
-    height: 800px;
+    height: 880px;
     top: 170px;
     left: 0;
     text-align: center;
@@ -75,10 +75,13 @@ body {
     height: 390px;
     margin: 30px 20px 0px 20px;
     background-color: #4B0A0A;
+    border-radius: 10px;
     z-index: 1;
 }
 
 .contentImg {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     position: absolute;
     left: 0;
     object-fit: cover;
@@ -228,10 +231,11 @@ body {
 }
 
 /* ========================================================================================================= */
+/* everything about the footer */
 .footer {
     position: absolute;
     left: 0;
-    bottom: -325px;
+    bottom: -450px;
     width: 100%;
     background-color: #41100D;
     color: white;
@@ -325,6 +329,7 @@ body {
 .instagramLogo:hover {
     transform: scale(1.25);
 }
+/* ========================================================================================================= */
 
 .aboutUs {
     position: absolute;
