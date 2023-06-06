@@ -29,3 +29,17 @@ function add_user() {
         note.innerHTML = "Passwords must be at least 8 characters";
     }
 }
+
+
+// AJAX for the Chronology Page each content window
+
+function outputToHtmlFromDb(inputStr, actionType, response) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById(response).innerHTML = this.responseText;
+        }
+    }
+    xmlhttp.open("POST", "connect" + actionType + "ToDb.php?input_value=" + inputStr, true);
+    xmlhttp.send();
+}

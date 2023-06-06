@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-	<body onload="time_now();">
+	<body onload="time_now(); outputToHtmlFromDb(1, 'Chronology', 'contentDiscriptionPrehistoricPeriod');">
 		<div class="bannerImg">
 			<img src="Images/banner.jpg" width="100%" height="175px"/>
 			<div class="bannerTxt"> Chronology</div>
@@ -24,9 +24,7 @@
             <div class="indivContentDiv">
                 <img class="contentImg" src="Images/Tabon-Skull-Cap-scaled.jpg">
                 <a class="contentLink" href="prehistoricPeriod.html"> Prehistoric Period </a>
-                <p class="contentDiscription"> 
-                    The prehistoric period of the Philippines, which spans from around 250,000 BCE to 900 CE, was a time of significant human development and cultural growth. During this era, the earliest human settlements in the Philippines emerged, including those of the Tabon Man, the Callao Man, and the Angono Petroglyphs.
-                </p>
+                <p class="contentDiscription" id="contentDiscriptionPrehistoricPeriod"></p>
             </div>
             <div class="indivContentDiv">
                 <img class="contentImg" src="Images/Extract_from_Inskripsyon_sa_Binatbat_na_Tanso_ng_Laguna.jpg">
