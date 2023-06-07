@@ -32,21 +32,28 @@ function add_user() {
 
 
 // AJAX for getting data from database and output to specified content window
-function outputToHtmlFromDb(inputStr, actionType, response) {
+function outputToHtmlFromDb(inputStr, response) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById(response).innerHTML = this.responseText;
         }
     }
-    xmlhttp.open("POST", "connect" + actionType + "ToDb.php?input_value=" + inputStr, true);
+    xmlhttp.open("POST", "connectContentToDb.php?input_value=" + inputStr, true);
     xmlhttp.send();
 }
 
 
 function chronologyCont() {
-    const field_id = ["contentDiscriptionPrehistoricPeriod","contentDiscriptionEarlyhistoricPeriod", "contentDiscriptionClassicalPeriod", "contentDiscriptionLatehistoricPeriod"]
+    const field_id = ["contentDiscriptionPrehistoricPeriod","contentDiscriptionEarlyhistoricPeriod", "contentDiscriptionClassicalPeriod", "contentDiscriptionLatehistoricPeriod"];
     for (var i = 0; i < 5; i++) {
-        outputToHtmlFromDb(i+1, "Chronology", field_id[i]);
+        outputToHtmlFromDb(i+1, field_id[i]);
+    }
+}
+
+function tradeAndCommerce() {
+    const field_id = ["contentDiscriptionMaritimeTradeNetworks","contentDiscriptionTradeRelationWithChina", "contentDiscriptionTradeRelationWithIndia", "contentDiscriptionTradeRelationWithArabia", "contentDiscriptionTradeRelationWithIndonesia"];
+    for (var i = 4; i < 9; i++) {
+        outputToHtmlFromDb(i+1, field_id[i]);
     }
 }

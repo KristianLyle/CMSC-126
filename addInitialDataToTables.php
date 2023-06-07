@@ -25,6 +25,12 @@ for ($i = 0; $i < 7; $i++) {
 # for CHRONOLOGY...
 include("addToChronology.php");
 
+
+include("addToTradeAndCommerce.php");
+include("addToSpirituality.php");
+include("addToGeography.php");
+include("addToEthnicity.php");
+include("addToCulture.php");
 /*
 $sql = "INSERT INTO userInfo (
         user_name, 
