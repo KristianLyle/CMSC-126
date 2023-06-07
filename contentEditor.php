@@ -10,13 +10,19 @@ $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 ?>
 
-<form action="contentEditor.php" method="POST">
-  <input type="hidden" id ="cont_id" name="cont_id" value="<?php echo $id ?>">
-  <textarea name="contentText" id="contentText" rows="10" style="height: 300px; width: 1000px"><?php echo isset($row['cont_text']) ? $row['cont_text'] : ''; ?></textarea>
-  <input type="submit" name="update" value="Update">
-</form>
-
-<button type="button" onclick="goBack()">Back</button>
+<html>
+  <head>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  </head>
+  <body>
+    <form action="contentEditor.php" method="POST" id="contentEditor">
+      <input type="hidden" id ="cont_id" name="cont_id" value="<?php echo $id ?>">
+      <textarea name="contentText" id="contentText" rows="10" style="height: 300px; width: 1000px"><?php echo isset($row['cont_text']) ? $row['cont_text'] : ''; ?></textarea>
+      <input type="submit" name="update" id="editorButton" value="Update">
+    </form>
+    <button type="button" onclick="goBack()" id="editorButton">Back</button>
+  </body>
+</html>
 
 <script>
    function goBack() {
