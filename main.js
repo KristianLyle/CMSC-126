@@ -43,17 +43,26 @@ function outputToHtmlFromDb(inputStr, response) {
     xmlhttp.send();
 }
 
-
+// For CHRONOLOGY
 function chronologyCont() {
     const field_id = ["contentDiscriptionPrehistoricPeriod","contentDiscriptionEarlyhistoricPeriod", "contentDiscriptionClassicalPeriod", "contentDiscriptionLatehistoricPeriod"];
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 4; i++) {
         outputToHtmlFromDb(i+1, field_id[i]);
     }
 }
 
+// for TRADE AND COMMERCE
 function tradeAndCommerce() {
     const field_id = ["contentDiscriptionMaritimeTradeNetworks","contentDiscriptionTradeRelationWithChina", "contentDiscriptionTradeRelationWithIndia", "contentDiscriptionTradeRelationWithArabia", "contentDiscriptionTradeRelationWithIndonesia"];
     for (var i = 4; i < 9; i++) {
+        outputToHtmlFromDb(i+1, field_id[i]);
+    }
+}
+
+// for SPIRITUALITY
+function spirituality() {
+    const field_id = ["contentDiscriptionAnimism","contentDiscriptionHinduism", "contentDiscriptionBuddhism", "contentDiscriptionIslam"];
+    for (var i = 9; i < 13; i++) {
         outputToHtmlFromDb(i+1, field_id[i]);
     }
 }
