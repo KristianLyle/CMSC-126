@@ -11,8 +11,6 @@ $row = $result->fetch_assoc();
   <input type="submit" value="Update">
 </form>
 
-
-
 <?php
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
