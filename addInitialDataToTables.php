@@ -31,30 +31,6 @@ include("addToSpirituality.php");
 include("addToGeography.php");
 include("addToEthnicity.php");
 include("addToCulture.php");
-/*
-$sql = "INSERT INTO userInfo (
-        user_name, 
-        user_age, 
-        user_email, 
-        user_address, 
-        user_img, 
-        num_of_car
-    ) 
-    VALUES (
-        '$name', 
-        $age, 
-        '$email', 
-        '$address', 
-        '$image', 
-        0
-    )";
-
-if ($conn -> query($sql) === TRUE) {
-    echo nl2br("\nData inserted successfully!");
-} else {
-    echo nl2br("\nError inserting data: " . $conn -> error);
-}
-*/
 
 $conn -> close();
 ?>
