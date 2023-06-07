@@ -1,0 +1,42 @@
+<?php
+include('serverConn.php');
+
+$contentName = array("Animism","Hinduism","Buddhism","Islam");
+$contentText = array("Animism is the belief that all objects, places, and creatures, including humans, possess a distinct spiritual essence. This belief system was prevalent among precolonial Filipinos, who believed that there were spirits and supernatural entities in nature that controlled and influenced various aspects of their lives. These spirits were known as anito, diwata, nuno, and other similar terms.
+The anito were spirits that were believed to inhabit objects such as trees, rocks, and bodies of water. They were considered to be the protectors of their respective domains, and people would often make offerings and perform rituals to appease them. The diwata, on the other hand, were female spirits associated with fertility, harvests, and natural resources such as forests and mountains. They were often worshipped through dances and prayers, and their blessings were sought for a bountiful harvest.
+The nuno were ancestral spirits that were believed to reside in specific places, such as trees, rocks, or bodies of water. They were considered to be the guardians of their respective territories, and people would often seek their guidance and protection through offerings and prayers.
+Precolonial Filipinos believed that these spirits could bring either blessings or misfortunes to their lives, depending on how they were treated. To show respect and gratitude, people would perform rituals and offer gifts such as food, livestock, and other valuables. Taboos were also observed to avoid angering or offending the spirits, such as not cutting down trees without permission or not disturbing bodies of water.
+In summary, animism played a significant role in the belief system of precolonial Filipinos, who believed in the existence of spirits and supernatural entities in nature. These spirits were respected and worshipped through rituals, offerings, prayers, and taboos, and their blessings were sought for various aspects of life.","Animism is the belief that all objects, places, and creatures, including humans, possess a distinct spiritual essence. This belief system was prevalent among precolonial Filipinos, who believed that there were spirits and supernatural entities in nature that controlled and influenced various aspects of their lives. These spirits were known as anito, diwata, nuno, and other similar terms.
+The anito were spirits that were believed to inhabit objects such as trees, rocks, and bodies of water. They were considered to be the protectors of their respective domains, and people would often make offerings and perform rituals to appease them. The diwata, on the other hand, were female spirits associated with fertility, harvests, and natural resources such as forests and mountains. They were often worshipped through dances and prayers, and their blessings were sought for a bountiful harvest.
+The nuno were ancestral spirits that were believed to reside in specific places, such as trees, rocks, or bodies of water. They were considered to be the guardians of their respective territories, and people would often seek their guidance and protection through offerings and prayers.
+Precolonial Filipinos believed that these spirits could bring either blessings or misfortunes to their lives, depending on how they were treated. To show respect and gratitude, people would perform rituals and offer gifts such as food, livestock, and other valuables. Taboos were also observed to avoid angering or offending the spirits, such as not cutting down trees without permission or not disturbing bodies of water.
+In summary, animism played a significant role in the belief system of precolonial Filipinos, who believed in the existence of spirits and supernatural entities in nature. These spirits were respected and worshipped through rituals, offerings, prayers, and taboos, and their blessings were sought for various aspects of life.","Animism is the belief that all objects, places, and creatures, including humans, possess a distinct spiritual essence. This belief system was prevalent among precolonial Filipinos, who believed that there were spirits and supernatural entities in nature that controlled and influenced various aspects of their lives. These spirits were known as anito, diwata, nuno, and other similar terms.
+The anito were spirits that were believed to inhabit objects such as trees, rocks, and bodies of water. They were considered to be the protectors of their respective domains, and people would often make offerings and perform rituals to appease them. The diwata, on the other hand, were female spirits associated with fertility, harvests, and natural resources such as forests and mountains. They were often worshipped through dances and prayers, and their blessings were sought for a bountiful harvest.
+The nuno were ancestral spirits that were believed to reside in specific places, such as trees, rocks, or bodies of water. They were considered to be the guardians of their respective territories, and people would often seek their guidance and protection through offerings and prayers.
+Precolonial Filipinos believed that these spirits could bring either blessings or misfortunes to their lives, depending on how they were treated. To show respect and gratitude, people would perform rituals and offer gifts such as food, livestock, and other valuables. Taboos were also observed to avoid angering or offending the spirits, such as not cutting down trees without permission or not disturbing bodies of water.
+In summary, animism played a significant role in the belief system of precolonial Filipinos, who believed in the existence of spirits and supernatural entities in nature. These spirits were respected and worshipped through rituals, offerings, prayers, and taboos, and their blessings were sought for various aspects of life.","Animism is the belief that all objects, places, and creatures, including humans, possess a distinct spiritual essence. This belief system was prevalent among precolonial Filipinos, who believed that there were spirits and supernatural entities in nature that controlled and influenced various aspects of their lives. These spirits were known as anito, diwata, nuno, and other similar terms.
+The anito were spirits that were believed to inhabit objects such as trees, rocks, and bodies of water. They were considered to be the protectors of their respective domains, and people would often make offerings and perform rituals to appease them. The diwata, on the other hand, were female spirits associated with fertility, harvests, and natural resources such as forests and mountains. They were often worshipped through dances and prayers, and their blessings were sought for a bountiful harvest.
+The nuno were ancestral spirits that were believed to reside in specific places, such as trees, rocks, or bodies of water. They were considered to be the guardians of their respective territories, and people would often seek their guidance and protection through offerings and prayers.
+Precolonial Filipinos believed that these spirits could bring either blessings or misfortunes to their lives, depending on how they were treated. To show respect and gratitude, people would perform rituals and offer gifts such as food, livestock, and other valuables. Taboos were also observed to avoid angering or offending the spirits, such as not cutting down trees without permission or not disturbing bodies of water.
+In summary, animism played a significant role in the belief system of precolonial Filipinos, who believed in the existence of spirits and supernatural entities in nature. These spirits were respected and worshipped through rituals, offerings, prayers, and taboos, and their blessings were sought for various aspects of life.");
+
+for ($i = 0; $i < 4; $i++) {
+    $sql = "INSERT INTO content (
+            cont_name,
+            cont_text,
+            cat_id
+        ) 
+            VALUES (
+            '$contentName[$i]',
+            '$contentText[$i]',
+            4
+        )";
+
+    if ($conn -> query($sql) === TRUE) {
+        echo nl2br("\nSPIRITUALITY Data inserted successfully!");
+    } else {
+        echo nl2br("\nError inserting data: " . $conn -> error);
+    }
+}
+
+?>
