@@ -26,8 +26,6 @@ Port facilities, such as Manila, Cebu, and Butuan, were essential for the succes
 Precolonial Philippines was connected to other parts of Southeast Asia and beyond through a vast network of sea routes. Seaborne commerce facilitated the exchange of a wide range of goods, including textiles, spices, ceramics, and precious metals. Filipino sailors and traders were highly respected in the region due to the country's maritime prowess.
 Today, the legacy of these trade networks can still be seen in the Philippines' cultural diversity and economic activity.");
 
-
-
 for ($i = 0; $i < 5; $i++){
     $contentNameEscaped = mysqli_real_escape_string($conn, $contentName[$i]);
     $contentTextEscaped = mysqli_real_escape_string($conn, $contentText[$i]);
