@@ -185,7 +185,7 @@ body {
     top: 175px;
     left: 0;
     width: 1365px;
-    height: 700px;
+    height: 865px;
 }
 
 .subContentImg {
@@ -233,6 +233,24 @@ body {
     background-color: #2B1111;
     transform: rotate(-10deg);
     z-index: -1;
+}
+
+#contentID {
+    position: absolute;
+    top: 705px;
+    font-size: 20px;
+    font-family: "Quicksand";
+    border: 5px solid none;
+    background: #AD2119;
+    border-radius: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    
 }
 
 /* ========================================================================================================= */
