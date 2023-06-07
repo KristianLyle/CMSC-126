@@ -31,8 +31,7 @@ function add_user() {
 }
 
 
-// AJAX for the Chronology Page each content window
-
+// AJAX for getting data from database and output to specified content window
 function outputToHtmlFromDb(inputStr, actionType, response) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -42,4 +41,12 @@ function outputToHtmlFromDb(inputStr, actionType, response) {
     }
     xmlhttp.open("POST", "connect" + actionType + "ToDb.php?input_value=" + inputStr, true);
     xmlhttp.send();
+}
+
+
+function chronologyCont() {
+    const field_id = ["contentDiscriptionPrehistoricPeriod","contentDiscriptionEarlyhistoricPeriod", "contentDiscriptionClassicalPeriod", "contentDiscriptionLatehistoricPeriod"]
+    for (var i = 0; i < 5; i++) {
+        outputToHtmlFromDb(i+1, "Chronology", field_id[i]);
+    }
 }

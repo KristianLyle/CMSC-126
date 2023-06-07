@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-	<body onload="time_now(); outputToHtmlFromDb(1, 'Chronology', 'contentDiscriptionPrehistoricPeriod');">
+	<body onload="time_now(); chronologyCont();">
 		<div class="bannerImg">
 			<img src="Images/banner.jpg" width="100%" height="175px"/>
 			<div class="bannerTxt"> Chronology</div>
@@ -21,31 +21,29 @@
         </div>
         <p id="current-date"></p>
         <div class="contentDiv">
+            
             <div class="indivContentDiv">
                 <img class="contentImg" src="Images/Tabon-Skull-Cap-scaled.jpg">
                 <a class="contentLink" href="prehistoricPeriod.html"> Prehistoric Period </a>
                 <p class="contentDiscription" id="contentDiscriptionPrehistoricPeriod"></p>
             </div>
+
             <div class="indivContentDiv">
                 <img class="contentImg" src="Images/Extract_from_Inskripsyon_sa_Binatbat_na_Tanso_ng_Laguna.jpg">
                 <a class="contentLink" href="earlyHistoricPeriod.html"> Early Historic Period </a>
-                <p class="contentDiscription">
-                    The early historic period of the Philippines, which spans from around 900 CE to 1300 CE, marked a significant turning point in the country's history. During this era, the emergence of writing and trade became increasingly prevalent in the Philippines, as evidenced by the Laguna Copperplate Inscription.
-                </p>
+                <p class="contentDiscription" id="contentDiscriptionEarlyhistoricPeriod"></p>
             </div>
+
             <div class="indivContentDiv">
                 <img class="contentImg" src="Images/woman-sultan.png">
                 <a class="contentLink" href="classicPeriod.html"> Classical Period </a>
-                <p class="contentDiscription">
-                    The classical period of the Philippines, which spans from around 1300 CE to 1500 CE, was a time of significant political, economic, social, and cultural development. During this era, various polities and kingdoms rose and fell in the precolonial Philippines, including Cebu, Butuan, Sulu, Maguindanao, Lanao, among others.
-                </p>
+                <p class="contentDiscription" id="contentDiscriptionClassicalPeriod"></p>
             </div>
+
             <div class="indivContentDiv">
                 <img class="contentImg" src="Images/SULTANS-RAJAHS-PHILIPPINES.jpg">
                 <a class="contentLink" href="lateHistoricPeriod.html"> Late Historic Period </a>
-                <p class="contentDiscription">
-                    The late historic period of the Philippines, which spans from around 1500 CE to 1565 CE, was a time of significant changes such as the expansion of Islam in the region, which led to the establishment of Muslim sultanates in the southern Philippines.
-                </p>
+                <p class="contentDiscription" id="contentDiscriptionLatehistoricPeriod"></p>
             </div>
             
             <img class="designImg" src="Images/textile.jpg" style="top: 480px; left: -70px;">

@@ -15,7 +15,6 @@ if ($result -> num_rows > 0) {
         echo($row["cont_text"]);
 
     }
-    
     $result -> free_result();
     
 } else {
