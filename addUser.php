@@ -1,12 +1,12 @@
 <?php
 
-include 'DBConnector.php';
+include 'serverConn.php';
 
 $username = $_GET["username"]; 
 $password = $_GET["password"]; 
 
 
-$sql = "INSERT INTO `user` (`username`, `password`) 
+$sql = "INSERT INTO `userInfo` (`user_name`, `user_password`) 
         VALUES ('$username', '$password');"; 
 $result = $conn -> query($sql);
 
