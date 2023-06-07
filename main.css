@@ -125,7 +125,7 @@ body {
 }
 
 .contentDiscription {
-    overflow-y: auto;
+    overflow: hidden;
     font-family: "Quicksand";
     text-align: justify;
     position: absolute;
@@ -137,25 +137,25 @@ body {
     color: white;
 }
 
-.contentDiscription::-webkit-scrollbar {
+.subContentData::-webkit-scrollbar {
     width: 15px;
 }
 
 /* Track */
-.contentDiscription::-webkit-scrollbar-track {
+.subContentData::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
     background-color: rgba(49, 44, 43, 0.589)
 }
 
 /* Handle */
-.contentDiscription::-webkit-scrollbar-thumb {
+.subContentData::-webkit-scrollbar-thumb {
     background: rgba(78, 29, 6, 0.74);
     border-radius: 10px;
 }
 
 /* Handle on hover */
-.contentDiscription::-webkit-scrollbar-thumb:hover {
+.subContentData::-webkit-scrollbar-thumb:hover {
     background: #911e0a;
 }
 
