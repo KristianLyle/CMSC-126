@@ -1,4 +1,4 @@
-<!-- v2.0 -->
+<!-- v2.1 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,6 +39,15 @@
 
 			<label class="label" for="password">Password</label><br>
 			<input type="text" class="inputField" name="password" required><br>
+			<?php
+			session_start();
+
+			// Check if an error message is set in the session
+			if (isset($_SESSION['error'])) {
+				echo "<p class='pop'>" . $_SESSION['error'] . "</p>";
+				unset($_SESSION['error']); // Clear the error message
+			}
+			?>
 
 			<button class="button" type="sumbit">Login</button><br>
 			<a id="query" class="navBar" href="signup.php">Don’t have an account? Create one</a>

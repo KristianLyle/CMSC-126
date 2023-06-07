@@ -1,5 +1,6 @@
-<!-- v2.0 -->
+<!-- v2.1 -->
 <?php
+session_start();
 include 'serverConn.php';
 
 $username = $_GET["username"]; 
@@ -10,9 +11,10 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) { 
     header("Location: Home.php");
-    echo "success";
 } else {
-    echo "Error: Invalid username or password.";
+    $_SESSION['error'] = "Error: Username and password do not match.";
+    header("Location: login.php");
+    exit();
 }
 
 $conn->close();

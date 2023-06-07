@@ -1,4 +1,4 @@
-<!-- v2.0 -->
+<!-- v2.1 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,7 @@
 	<title>Sign-up</title>
 	<link rel="stylesheet" type="text/css" href="custom.css">
 	<script type="text/javascript" src="main.js"></script>
+	
 </head>
 <body onload="time_now()">
 	<div id="bannerContainer"> 
@@ -42,8 +43,17 @@
 		<label class="label" for="repassword">Re-Enter Password</label><br>
 		<input type="text" id="repassword" class="inputField" name="repassword" required><br>
 		<p class="pop" id="warning"></p>
+		<?php
+		session_start();
 
-		<button class="button" type="submit">Sign Up</button><br>
+		// Check if an error message is set in the session
+		if (isset($_SESSION['error'])) {
+			echo "<p class='pop'>" . $_SESSION['error'] . "</p>";
+			unset($_SESSION['error']); // Clear the error message
+		}
+		?>
+
+		<button class="button" type="submit" onclick="add_user()">Sign Up</button><br>
 	</form>
 	<div id="footer">
 		<p id="copyright">©2023 Project Katipunan. All rights reserved.</p>

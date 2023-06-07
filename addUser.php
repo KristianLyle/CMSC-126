@@ -1,13 +1,15 @@
-<!-- v2.0 -->
+<!-- v2.1 -->
 <?php
+session_start();
 include 'serverConn.php';
 
-$username = $_GET["username"]; 
-$password = $_GET["password"]; 
-$repassword = $_GET["repassword"]; 
+$username = $_GET["username"];
+$password = $_GET["password"];
+$repassword = $_GET["repassword"];
 
 if ($password != $repassword) {
-    echo "Error: Passwords do not match.";
+    $_SESSION['error'] = "Error: Passwords do not match.";
+    header("Location: signup.php");
     exit();
 }
 
@@ -16,19 +18,22 @@ $checkUsernameQuery = "SELECT * FROM `userInfo` WHERE `user_name` = '$username'"
 $result = $conn->query($checkUsernameQuery);
 
 if ($result->num_rows > 0) {
-    echo "Error: Username already exists.";
+    $_SESSION['error'] = "Error: Username already exists.";
+    header("Location: signup.php");
     exit();
 }
 
 $sql = "INSERT INTO `userInfo` (`user_name`, `user_password`) 
-        VALUES ('$username', '$password');"; 
+        VALUES ('$username', '$password');";
 $insertResult = $conn->query($sql);
 
-if ($insertResult === TRUE) { 
+if ($insertResult === TRUE) {
     header("Location: login.php");
-    echo "success";
+    exit();
 } else {
-    echo "Error: " . $sql . "<br/>" . $conn->error;
+    $_SESSION['error'] = "Error: " . $sql . "<br/>" . $conn->error;
+    header("Location: signup.php");
+    exit();
 }
 
 $conn->close();
