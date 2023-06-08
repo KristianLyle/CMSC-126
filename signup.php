@@ -37,11 +37,11 @@
 		<input type="text" id="username" class="inputField" name="username" required><br>
 
 		<label class="label" for="password">Password</label><br>
-		<input type="text" id="password" class="inputField" name="password" required><br>
+		<input type="password" id="password" class="inputField" name="password" required><br>
 		<p class="pop" id="note"></p>
 
 		<label class="label" for="repassword">Re-Enter Password</label><br>
-		<input type="text" id="repassword" class="inputField" name="repassword" required><br>
+		<input type="password" id="repassword" class="inputField" name="repassword" required><br>
 		<p class="pop" id="warning"></p>
 		<?php
 		session_start();

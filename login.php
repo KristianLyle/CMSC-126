@@ -38,7 +38,7 @@
 			<input type="text" class="inputField" name="username" required><br>
 
 			<label class="label" for="password">Password</label><br>
-			<input type="text" class="inputField" name="password" required><br>
+			<input type="password" class="inputField" name="password" required><br>
 			<?php
 			session_start();
 
