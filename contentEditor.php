@@ -48,6 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   
       $updateContent = "UPDATE content SET cont_text = '$escapedContent' WHERE cont_id ='$id'";
       $updateResult = $conn->query($updateContent);
+
+      echo "UPDATED SUCCESSFULLY";
   
       $conn->close();
     }
