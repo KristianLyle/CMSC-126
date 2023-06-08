@@ -13,9 +13,13 @@
             <img src="Images/banner.jpg" width="100%" height="175px"/>
             <div class="bannerTxt"> Trade Relations with Arabia </div>
         </div>
-        <div class="searchContainer">
+        <form class="searchContainer" action="searchContent.php" method="get">
+            <input class="searchBar" name="searchTerm" placeholder="Search">
+            <button type="submit" id ="hiddenButton" name="contentID" value="search"></button>
+        </form>
+        <!-- <div class="searchContainer">
             <input class="searchBar" placeholder="Search">
-        </div>
+        </div> -->
         <div>
             <a class="aboutUs" href="tradeCommerce.html"> Back </a>
         </div>

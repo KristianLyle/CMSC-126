@@ -13,9 +13,10 @@
     <div class ="bannerImg">
         <img src="Images/banner.jpg" width="100%" height="175px">
         <div class="bannerTxt"> A look through Pre-Colonial Philippines </div>
-        <div class="searchContainer">
-            <input class="searchBar" placeholder="Search">
-        </div>
+        <form class="searchContainer" action="searchContent.php" method="get">
+            <input class="searchBar" name="searchTerm" placeholder="Search">
+            <button type="submit" id ="hiddenButton" name="contentID" value="search"></button>
+        </form>
         <div>
             <a class="aboutUs" href="aboutUs.html">About Us</a>
         </div>

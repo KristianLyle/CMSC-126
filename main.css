@@ -737,3 +737,7 @@ body {
     cursor: pointer;
     font-weight: 500;
   }
+
+#hiddenButton {
+    display: none;
+}
