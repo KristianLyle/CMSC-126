@@ -14,7 +14,7 @@
 		<img id="bannerSub" src="Images/bannerSub.png" title="A Look Through Pre-Colonial Philippines" alt="A Look Through Pre-Colonial Philippines">
 
 		<div id="sub-banner">
-		<input type="text" placeholder="Search" id="search">
+		<!-- <input type="text" placeholder="Search" id="search"> -->
 <div class="navigation">
 		 
 		    <!-- <img id="drpIcon" src="Images/vector.png"> -->
