@@ -10,7 +10,7 @@ $sql = "SELECT * FROM `userInfo` WHERE `user_name` = '$username' AND `user_passw
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) { 
-    header("Location: Home.php");
+    header("Location: Home.html");
 } else {
     $_SESSION['error'] = "Error: Username and password do not match.";
     header("Location: login.php");
