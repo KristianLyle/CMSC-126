@@ -15,9 +15,9 @@
 
 		<div id="sub-banner">
 		<input type="text" placeholder="Search" id="search">
-		<div class="navigation">
+<div class="navigation">
 		 
-		    <img id="drpIcon" src="Images/vector.png">
+		    <!-- <img id="drpIcon" src="Images/vector.png"> -->
 		
 			 <div class="menu">
 			    <a class="opt" href="Home.html">Home</a>
