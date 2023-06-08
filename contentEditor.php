@@ -3,7 +3,7 @@ include('serverConn.php');
 
 $id = $_POST['cont_id'] ?? '';
 
-echo $id;
+#echo $id;
 
 $sql = "SELECT * FROM content WHERE cont_id = '$id'";
 $result = $conn->query($sql);
@@ -17,7 +17,7 @@ $row = $result->fetch_assoc();
   <body>
     <form action="contentEditor.php" method="POST" id="contentEditor">
       <input type="hidden" id ="cont_id" name="cont_id" value="<?php echo $id ?>">
-      <textarea name="contentText" id="contentText" rows="10" style="height: 300px; width: 1000px"><?php echo isset($row['cont_text']) ? $row['cont_text'] : ''; ?></textarea>
+      <textarea name="contentText" id="contentText" rows="10"><?php echo isset($row['cont_text']) ? $row['cont_text'] : ''; ?></textarea>
       <input type="submit" name="update" id="editorButton" value="Update">
     </form>
     <button type="button" onclick="goBack()" id="editorButton">Back</button>
@@ -39,7 +39,7 @@ $row = $result->fetch_assoc();
 
 $id = $_POST['cont_id'] ?? '';
 
-echo $id;
+#echo $id;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['update'])) {

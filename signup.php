@@ -53,7 +53,7 @@
 		}
 		?>
 
-		<button class="button" type="submit" onclick="add_user()">Sign Up</button><br>
+		<button class="button" type="submit">Sign Up</button><br>
 	</form>
 	<div id="footer">
 		<p id="copyright">©2023 Project Katipunan. All rights reserved.</p>
